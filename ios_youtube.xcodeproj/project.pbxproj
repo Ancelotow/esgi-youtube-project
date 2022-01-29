@@ -10,8 +10,8 @@
 		A522206C27A2D8A20040C94A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522206B27A2D8A20040C94A /* AppDelegate.swift */; };
 		A522207527A2D8A20040C94A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A522207427A2D8A20040C94A /* Assets.xcassets */; };
 		A522207827A2D8A20040C94A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A522207627A2D8A20040C94A /* LaunchScreen.storyboard */; };
-		A522209F27A2DD060040C94A /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522209D27A2DD060040C94A /* ConnectionViewController.swift */; };
-		A52220A027A2DD060040C94A /* ConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A522209E27A2DD060040C94A /* ConnectionViewController.xib */; };
+		A5C31DB427A57EB900499099 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C31DB227A57EB900499099 /* ConnectionViewController.swift */; };
+		A5C31DB527A57EB900499099 /* ConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C31DB327A57EB900499099 /* ConnectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,8 @@
 		A522207927A2D8A20040C94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A522207E27A2D8A20040C94A /* ios_youtubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_youtubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A522208827A2D8A20040C94A /* ios_youtubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_youtubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A522209D27A2DD060040C94A /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConnectionViewController.swift; path = ../ConnectionViewController.swift; sourceTree = "<group>"; };
-		A522209E27A2DD060040C94A /* ConnectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectionViewController.xib; sourceTree = "<group>"; };
+		A5C31DB227A57EB900499099 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		A5C31DB327A57EB900499099 /* ConnectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +89,12 @@
 		A522206A27A2D8A20040C94A /* ios_youtube */ = {
 			isa = PBXGroup;
 			children = (
-				A522209D27A2DD060040C94A /* ConnectionViewController.swift */,
-				A522209E27A2DD060040C94A /* ConnectionViewController.xib */,
 				A522206B27A2D8A20040C94A /* AppDelegate.swift */,
 				A522207427A2D8A20040C94A /* Assets.xcassets */,
 				A522207627A2D8A20040C94A /* LaunchScreen.storyboard */,
 				A522207927A2D8A20040C94A /* Info.plist */,
+				A5C31DB227A57EB900499099 /* ConnectionViewController.swift */,
+				A5C31DB327A57EB900499099 /* ConnectionViewController.xib */,
 			);
 			path = ios_youtube;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A522207827A2D8A20040C94A /* LaunchScreen.storyboard in Resources */,
-				A52220A027A2DD060040C94A /* ConnectionViewController.xib in Resources */,
+				A5C31DB527A57EB900499099 /* ConnectionViewController.xib in Resources */,
 				A522207527A2D8A20040C94A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,7 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A522209F27A2DD060040C94A /* ConnectionViewController.swift in Sources */,
+				A5C31DB427A57EB900499099 /* ConnectionViewController.swift in Sources */,
 				A522206C27A2D8A20040C94A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
