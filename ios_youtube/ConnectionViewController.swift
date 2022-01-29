@@ -10,6 +10,8 @@ import GoogleSignIn
 
 class ConnectionViewController: UIViewController  {
 
+    @IBOutlet weak var btnConnection: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
