@@ -14,7 +14,6 @@ class ConnectionViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
 }
