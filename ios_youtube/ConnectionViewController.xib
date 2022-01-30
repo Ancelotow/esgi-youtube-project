@@ -4,13 +4,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConnectionViewController" customModule="ios_youtube" customModuleProvider="target">
             <connections>
-                <outlet property="btnConnection" destination="0E2-IM-eLL" id="STk-x0-g0b"/>
+                <outlet property="signInButton" destination="gHH-FB-XaW" id="4iT-Rz-Gsi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,39 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube Mananger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-Zk-VHe">
-                    <rect key="frame" x="0.0" y="144" width="414" height="38.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                    <color key="textColor" systemColor="systemBackgroundColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0E2-IM-eLL">
-                    <rect key="frame" x="128" y="478" width="158" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-FB-XaW">
+                    <rect key="frame" x="161" y="544" width="93" height="31"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" title="Connexion">
-                        <backgroundConfiguration key="background" cornerRadius="18"/>
-                        <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                    </buttonConfiguration>
+                    <buttonConfiguration key="configuration" style="gray" title="Connexion"/>
+                    <connections>
+                        <action selector="connection:" destination="-1" eventType="touchUpInside" id="LiA-Pb-yyl"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="c2m-Zk-VHe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OJP-Ck-vg8"/>
-                <constraint firstItem="c2m-Zk-VHe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="UQY-jV-FE9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c2m-Zk-VHe" secondAttribute="trailing" id="Ymz-wc-YIA"/>
+                <constraint firstItem="gHH-FB-XaW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="500" id="tZ4-JJ-SR4"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
