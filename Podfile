@@ -3,6 +3,7 @@ use_frameworks!
 target 'ios_youtube' do
     pod 'GoogleAPIClientForREST/YouTube'
     pod 'Google/SignIn'
+    pod 'Firebase'
 end
 
 post_install do |installer|

@@ -7,16 +7,12 @@
 
 import UIKit
 import GoogleSignIn
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    func applicationDidFinishLaunching(_ application: UIApplication) {
-        // Initialize Google sign-in.
-        GIDSignIn.sharedInstance().clientID = "172071375553-6dh1d6jnrtdh0thhdpjv3evrs4tit3en.apps.googleusercontent.com"
-    }
 
     func application(_ application: UIApplication,
         open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
@@ -36,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FIRApp.configure()
+        GIDSignIn.sharedInstance().clientID = "172071375553-6dh1d6jnrtdh0thhdpjv3evrs4tit3en.apps.googleusercontent.com"
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = UINavigationController(rootViewController: ConnectionViewController())
         window.makeKeyAndVisible()
