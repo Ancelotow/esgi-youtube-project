@@ -12,7 +12,7 @@ import GTMSessionFetcher
 
 class ConnectionViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
-    private let scopes = [kGTLRAuthScopeYouTubeReadonly]
+    private let scopes = [kGTLRAuthScopeYouTubeReadonly, kGTLRAuthScopeYouTube, kGTLRAuthScopeYouTubeForceSsl, kGTLRAuthScopeYouTubeChannelMembershipsCreator]
     private let service = GTLRYouTubeService()
     @IBOutlet weak var signInButton: GIDSignInButton!
     let output = UITextView()
@@ -33,10 +33,14 @@ class ConnectionViewController: UIViewController, GIDSignInDelegate, GIDSignInUI
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             self.service.authorizer = nil
+            print(error)
         } else {
             self.signInButton.isHidden = true
             self.output.isHidden = false
             self.service.authorizer = user.authentication.fetcherAuthorizer()
+            print(user.authentication.accessToken) // ACCESS TOKEN
+            print(user.authentication.idToken) // ACCESS TOKEN
+            print("SUCCESS")
         }
     }
     
