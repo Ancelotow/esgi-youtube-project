@@ -14,6 +14,7 @@ import GTMSessionFetcher
 public class Session {
     
     private static var session: Session? = nil
+    let API_KEY = "AIzaSyBMMt_y8ZWqbJiqYoosDqpEdsK26i9R584"
     private var accessToken: String // Token a utilisé dans les appels API
     private var idToken: String
     
@@ -35,6 +36,7 @@ public class Session {
     
     static func openSession(authentication: GIDAuthentication) -> Session {
         if session == nil {
+            print(authentication.accessToken)
             session = Session(accessToken: authentication.accessToken, idToken: authentication.idToken)
         }
         return session!

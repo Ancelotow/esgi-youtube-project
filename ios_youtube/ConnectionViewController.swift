@@ -30,9 +30,11 @@ class ConnectionViewController: UIViewController, GIDSignInDelegate, GIDSignInUI
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             self.service.authorizer = nil
+            return
         } else {
             self.service.authorizer = user.authentication.fetcherAuthorizer()
             Session.openSession(authentication: user.authentication)
+            self.navigationController?.pushViewController(HomeViewController(), animated: true)
         }
     }
     
