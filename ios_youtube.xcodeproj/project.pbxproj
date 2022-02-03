@@ -14,6 +14,7 @@
 		A522206C27A2D8A20040C94A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522206B27A2D8A20040C94A /* AppDelegate.swift */; };
 		A522207527A2D8A20040C94A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A522207427A2D8A20040C94A /* Assets.xcassets */; };
 		A522207827A2D8A20040C94A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A522207627A2D8A20040C94A /* LaunchScreen.storyboard */; };
+		A57EDA1027AC4D87002216AD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EDA0F27AC4D87002216AD /* Session.swift */; };
 		A5C31DB427A57EB900499099 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C31DB227A57EB900499099 /* ConnectionViewController.swift */; };
 		A5C31DB527A57EB900499099 /* ConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C31DB327A57EB900499099 /* ConnectionViewController.xib */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		A522207927A2D8A20040C94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A522207E27A2D8A20040C94A /* ios_youtubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_youtubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A522208827A2D8A20040C94A /* ios_youtubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_youtubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57EDA0F27AC4D87002216AD /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		A5C31DB227A57EB900499099 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		A5C31DB327A57EB900499099 /* ConnectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 		A522206A27A2D8A20040C94A /* ios_youtube */ = {
 			isa = PBXGroup;
 			children = (
+				A57EDA0E27AC4D74002216AD /* entities */,
 				A51383B327A6B161000AF47B /* GoogleService-Info.plist */,
 				A522206B27A2D8A20040C94A /* AppDelegate.swift */,
 				A522207427A2D8A20040C94A /* Assets.xcassets */,
@@ -126,6 +129,14 @@
 				A5C31DB327A57EB900499099 /* ConnectionViewController.xib */,
 			);
 			path = ios_youtube;
+			sourceTree = "<group>";
+		};
+		A57EDA0E27AC4D74002216AD /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				A57EDA0F27AC4D87002216AD /* Session.swift */,
+			);
+			path = entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 			files = (
 				A5C31DB427A57EB900499099 /* ConnectionViewController.swift in Sources */,
 				A522206C27A2D8A20040C94A /* AppDelegate.swift in Sources */,
+				A57EDA1027AC4D87002216AD /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
