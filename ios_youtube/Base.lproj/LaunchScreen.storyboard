@@ -14,8 +14,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube-logo" translatesAutoresizingMaskIntoConstraints="NO" id="eYF-dq-gQn">
+                                <rect key="frame" x="50" y="344" width="314" height="208"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eYF-dq-gQn" secondAttribute="trailing" constant="50" id="6Fz-Aw-WW4"/>
+                            <constraint firstItem="eYF-dq-gQn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Cii-Pp-Kta"/>
+                            <constraint firstItem="eYF-dq-gQn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="dDM-Ww-zLZ"/>
+                            <constraint firstItem="eYF-dq-gQn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rzq-Rm-46Y"/>
+                            <constraint firstItem="eYF-dq-gQn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="so6-gU-Yvb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,4 +35,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="youtube-logo" width="475" height="147"/>
+    </resources>
 </document>
