@@ -14,11 +14,11 @@ public class Snippet: CustomStringConvertible {
     let title: String
     let desc: String
     let URLImage: URL
-    let channelId: String
     let publishedAt: Date?
+    let channelId: String
     
     public var description: String {
-        return "\(self.id) : \(self.title) --- \(self.channelId)"
+        return "\(self.id) : \(self.title)"
     }
     
     public init(id: String, title: String, desc: String, URLImage: URL, channelId: String, publishedAt: Date?) {
@@ -26,8 +26,8 @@ public class Snippet: CustomStringConvertible {
         self.title = title
         self.desc = desc
         self.URLImage = URLImage
-        self.channelId = channelId
         self.publishedAt = publishedAt
+        self.channelId = channelId
     }
     
 }

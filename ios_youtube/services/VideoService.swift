@@ -1,17 +1,17 @@
 //
-//  SubscriptionService.swift
+//  VideoService.swift
 //  ios_youtube
 //
-//  Created by Owen Ancelot on 03/02/2022.
+//  Created by Owen Ancelot on 04/02/2022.
 //
 
 import Foundation
 
-public class SubscriptionService {
+public class VideoService {
     
-    static func getSubscription(completion: @escaping (Error?, [Snippet]?) -> Void) -> Void {
-        let parameters = [ "mine": "true", "maxResults": "20"]
-        let urlStr = Service.API_URL + "subscriptions"
+    static func getVideoFromChannel(id: String, completion: @escaping (Error?, [Snippet]?) -> Void) -> Void {
+        let parameters = [ "channelId": id, "maxResults": "15", "order": "date"]
+        let urlStr = Service.API_URL + "search"
         guard let url = Service.getURLRequest(urlStr: urlStr, parameters: parameters, method: HttpMethod.GET) else {
             completion(NSError(domain: "com.esgi.youtube", code: 1, userInfo: [
                 NSLocalizedFailureReasonErrorKey: "Invalid URL"
@@ -37,7 +37,7 @@ public class SubscriptionService {
                     ]), nil)
                     return
                 }
-                let snippets = ChannelFactory.channels(from: dictSnippets)
+                let snippets = VideoFactory.videos(from: dictSnippets)
                 completion(nil, snippets)
             } catch {
                 completion(err, nil)

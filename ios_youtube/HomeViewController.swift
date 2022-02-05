@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableChannel.register(channelCell, forCellReuseIdentifier: HomeViewController.channelCellID)
         self.tableChannel.dataSource = self
         self.tableChannel.delegate = self
+        self.navigationItem.hidesBackButton = true
         SubscriptionService.getSubscription() { err, result in
             guard err == nil else {
                 return
