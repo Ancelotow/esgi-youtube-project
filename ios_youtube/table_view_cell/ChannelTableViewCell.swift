@@ -7,13 +7,23 @@
 
 import UIKit
 
-class ChannelTableViewCell: UITableViewCell {
+class ChannelTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    static let videoCellId = "VIDEO_CELL_ID"
+    @IBOutlet weak var collectionViewVideo: UICollectionView!
     @IBOutlet weak var labelTitle: UILabel!
+    var videos: [Snippet] = [] {
+        didSet {
+            collectionViewVideo.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let videoCell = UINib(nibName: "VideoCollectionViewCell", bundle: nil)
+        self.collectionViewVideo.register(videoCell, forCellWithReuseIdentifier: ChannelTableViewCell.videoCellId)
+        self.collectionViewVideo.dataSource = self
+        self.collectionViewVideo.delegate = self
     }
 
     func redraw(channel: Snippet) {
@@ -26,18 +36,24 @@ class ChannelTableViewCell: UITableViewCell {
                 return
             }
             DispatchQueue.main.async {
-                print(channel.title)
-                for video in allVideo {
-                    print(video)
-                }
+                self.videos = allVideo
             }
         }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.videos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let video = self.videos[indexPath.row]
+        let cell = collectionViewVideo.dequeueReusableCell(withReuseIdentifier: ChannelTableViewCell.videoCellId, for: indexPath) as! VideoCollectionViewCell
+        cell.redraw(video: video)
+        return cell
     }
     
 }
