@@ -25,7 +25,7 @@ public class VideoFactory {
               let thumbs = dictSnippet["thumbnails"] as? [String: Any] else {
             return nil
         }
-        guard let imgDefault = thumbs["default"] as? [String: Any] else {
+        guard let imgDefault = thumbs["high"] as? [String: Any] else {
             return nil
         }
         guard let imgURLStr = imgDefault["url"] as? String else {

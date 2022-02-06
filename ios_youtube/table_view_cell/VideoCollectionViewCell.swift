@@ -9,15 +9,23 @@ import UIKit
 
 class VideoCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var imageViewVideo: UIImageView!
+    var imageDownloader: ImageDownloader!
+    var video: Snippet?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.imageDownloader = ImageDownloader()
     }
     
     func redraw(video: Snippet) {
-        self.title.text = video.title
+        self.video = video
+        self.imageViewVideo.image = nil // vide l'image pendant le téléchargement
+        self.imageDownloader.download(URL: video.URLImage) { err, img in
+            DispatchQueue.main.sync {
+                self.imageViewVideo.image = img
+            }
+        }
     }
 
 }

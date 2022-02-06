@@ -10,6 +10,7 @@
 		211250E2FA88BABD8F555BF3 /* Pods_ios_youtube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29545B3DE4658F7E9211AAC2 /* Pods_ios_youtube.framework */; };
 		A5099A3727B00944007E07B0 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5099A3527B00944007E07B0 /* VideoCollectionViewCell.swift */; };
 		A5099A3827B00944007E07B0 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5099A3627B00944007E07B0 /* VideoCollectionViewCell.xib */; };
+		A5099A3A27B0128B007E07B0 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5099A3927B0128B007E07B0 /* ImageDownloader.swift */; };
 		A51383B427A6B161000AF47B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A51383B327A6B161000AF47B /* GoogleService-Info.plist */; };
 		A51383B527A6B161000AF47B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A51383B327A6B161000AF47B /* GoogleService-Info.plist */; };
 		A51383B627A6B161000AF47B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A51383B327A6B161000AF47B /* GoogleService-Info.plist */; };
@@ -56,6 +57,7 @@
 		85659FB1BF1FAEC134D3584B /* Pods-ios_youtube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_youtube.debug.xcconfig"; path = "Target Support Files/Pods-ios_youtube/Pods-ios_youtube.debug.xcconfig"; sourceTree = "<group>"; };
 		A5099A3527B00944007E07B0 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5099A3627B00944007E07B0 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		A5099A3927B0128B007E07B0 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		A51383B327A6B161000AF47B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A522206827A2D8A20040C94A /* ios_youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A522206B27A2D8A20040C94A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				A57EDA3127AE905A002216AD /* factories */,
 				A57EDA0F27AC4D87002216AD /* Session.swift */,
 				A57EDA1527AC658F002216AD /* Snippet.swift */,
+				A5099A3927B0128B007E07B0 /* ImageDownloader.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5099A3727B00944007E07B0 /* VideoCollectionViewCell.swift in Sources */,
+				A5099A3A27B0128B007E07B0 /* ImageDownloader.swift in Sources */,
 				A5C31DB427A57EB900499099 /* ConnectionViewController.swift in Sources */,
 				A57EDA2C27AD2609002216AD /* VideoService.swift in Sources */,
 				A57EDA3727AE91DF002216AD /* VideoFactory.swift in Sources */,
