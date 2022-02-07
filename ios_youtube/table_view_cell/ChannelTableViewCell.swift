@@ -10,6 +10,7 @@ import UIKit
 class ChannelTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
 
     static let videoCellId = "VIDEO_CELL_ID"
+    var homeController: HomeViewController!
     @IBOutlet weak var collectionViewVideo: UICollectionView!
     @IBOutlet weak var labelTitle: UILabel!
     var videos: [Snippet] = [] {
@@ -57,7 +58,13 @@ class ChannelTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300.0, height: 150.0 )
+        return CGSize(width: 400.0, height: 150.0 )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let video = self.videos[indexPath.row]
+        let videoController = VideoViewController.newInstance(video: video)
+        self.homeController.navigationController?.pushViewController(videoController, animated: true)
     }
     
 }

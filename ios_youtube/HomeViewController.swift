@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableChannel.register(channelCell, forCellReuseIdentifier: HomeViewController.channelCellID)
         self.tableChannel.dataSource = self
         self.tableChannel.delegate = self
-        self.tableChannel.rowHeight = 215.0
+        self.tableChannel.rowHeight = 155.0
         self.navigationItem.hidesBackButton = true
         SubscriptionService.getSubscription() { err, result in
             guard err == nil else {
@@ -45,6 +45,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let channel = self.channels[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewController.channelCellID, for: indexPath) as! ChannelTableViewCell
+        cell.homeController = self
         cell.redraw(channel: channel)
         return cell
     }

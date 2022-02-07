@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoViewController" customModule="ios_youtube" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="hJP-U2-mC2" id="HGI-Ux-4Qw"/>
+                <outlet property="imageView" destination="KIT-VS-b9c" id="0dc-j9-FQp"/>
+                <outlet property="readVideoButton" destination="kHh-EP-IyY" id="Nag-4i-qb0"/>
+                <outlet property="titleLabel" destination="NKm-AS-bdp" id="eFT-Nh-huB"/>
+                <outlet property="unsubscribeButton" destination="jdS-8i-DwG" id="Q4s-r5-AEA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KIT-VS-b9c">
+                    <rect key="frame" x="0.0" y="44" width="414" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="EJj-y1-4N0"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKm-AS-bdp">
+                    <rect key="frame" x="5" y="294" width="404" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Ljy-LJ-Tny"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHh-EP-IyY">
+                    <rect key="frame" x="5" y="364" width="404" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="3Cg-I2-38C"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Lecture">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJP-U2-mC2">
+                    <rect key="frame" x="5" y="464" width="414" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="oyN-0t-zsE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdS-8i-DwG">
+                    <rect key="frame" x="5" y="419" width="404" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Q9f-nF-Ebf"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Se désabonner de la chaine">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kHh-EP-IyY" secondAttribute="trailing" constant="5" id="2dz-OR-EnQ"/>
+                <constraint firstItem="kHh-EP-IyY" firstAttribute="top" secondItem="NKm-AS-bdp" secondAttribute="bottom" constant="20" id="Dnh-73-xTd"/>
+                <constraint firstItem="KIT-VS-b9c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GVd-iG-p0s"/>
+                <constraint firstItem="hJP-U2-mC2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="5" id="GeT-05-pgv"/>
+                <constraint firstItem="jdS-8i-DwG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="Nen-a2-WlL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jdS-8i-DwG" secondAttribute="trailing" constant="5" id="P1K-lF-KKv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NKm-AS-bdp" secondAttribute="trailing" constant="5" id="YhI-JE-5Jt"/>
+                <constraint firstItem="KIT-VS-b9c" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZWG-Hw-hfc"/>
+                <constraint firstItem="NKm-AS-bdp" firstAttribute="top" secondItem="KIT-VS-b9c" secondAttribute="bottom" id="bkd-9L-eTZ"/>
+                <constraint firstItem="hJP-U2-mC2" firstAttribute="top" secondItem="jdS-8i-DwG" secondAttribute="bottom" id="eGg-GO-Jgv"/>
+                <constraint firstItem="kHh-EP-IyY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="hDg-0R-B8J"/>
+                <constraint firstItem="NKm-AS-bdp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="mcr-tK-btH"/>
+                <constraint firstItem="hJP-U2-mC2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="sPh-KK-UQW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KIT-VS-b9c" secondAttribute="trailing" id="tJX-uo-UK2"/>
+                <constraint firstItem="jdS-8i-DwG" firstAttribute="top" secondItem="kHh-EP-IyY" secondAttribute="bottom" constant="10" id="tty-pk-0ei"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </view>
+    </objects>
+</document>
