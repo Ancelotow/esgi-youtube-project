@@ -16,6 +16,8 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var imageDownloader: ImageDownloader!
     var video: Snippet!
+    @IBOutlet weak var buttonLike: UIButton!
+    @IBOutlet weak var buttonDislike: UIButton!
     
     static func newInstance(video: Snippet) -> VideoViewController {
         let videoViewController = VideoViewController()
@@ -35,5 +37,25 @@ class VideoViewController: UIViewController {
             }
         }
     }
-
+    
+    @IBAction func likeVideo(_ sender: Any) {
+        VideoService.rateVideo(id: video.id, rate: VideoRate.LIKE) { err in
+            guard err == nil else {
+                return;
+            }
+            let refreshAlert = UIAlertController(title: "Like", message: "Vous avez aimé la vidéo", preferredStyle: UIAlertController.Style.alert)
+            refreshAlert.show(self, sender: nil)
+        }
+    }
+    
+    @IBAction func dislikeVideo(_ sender: Any) {
+        VideoService.rateVideo(id: video.id, rate: VideoRate.DISLIKE) { err in
+            guard err == nil else {
+                return;
+            }
+            let refreshAlert = UIAlertController(title: "Dislike", message: "Vous n'avez pas aimé la vidéo", preferredStyle: UIAlertController.Style.alert)
+            refreshAlert.show(self, sender: nil)
+        }
+    }
+    
 }

@@ -12,7 +12,7 @@ public class VideoService {
     static func getVideoFromChannel(id: String, completion: @escaping (Error?, [Snippet]?) -> Void) -> Void {
         let parameters = [ "channelId": id, "maxResults": "15", "order": "date"]
         let urlStr = Service.API_URL + "search"
-        guard let url = Service.getURLRequest(urlStr: urlStr, parameters: parameters, method: HttpMethod.GET) else {
+        guard let url = Service.getURLRequest(urlStr: urlStr, parameters: parameters, method: HttpMethod.GET, body: nil) else {
             completion(NSError(domain: "com.esgi.youtube", code: 1, userInfo: [
                 NSLocalizedFailureReasonErrorKey: "Invalid URL"
             ]), nil)
@@ -41,6 +41,24 @@ public class VideoService {
                 completion(nil, snippets)
             } catch {
                 completion(err, nil)
+                return
+            }
+        }
+        task.resume()
+    }
+    
+    static func rateVideo(id: String, rate: VideoRate, completion: @escaping (Error?) -> Void ) -> Void {
+        let urlStr = Service.API_URL + "videos/rate"
+        let jsonBody = ["id": id, "rating": rate.rawValue]
+        guard let url = Service.getURLRequest(urlStr: urlStr, parameters: nil, method: HttpMethod.POST, body: jsonBody) else {
+            completion(NSError(domain: "com.esgi.youtube", code: 1, userInfo: [
+                NSLocalizedFailureReasonErrorKey: "Invalid URL"
+            ]))
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { data, res, err in
+            guard err == nil else {
+                completion(err)
                 return
             }
         }

@@ -11,7 +11,7 @@ public class Service {
     
     public static let API_URL = "https://www.googleapis.com/youtube/v3/" // URL pour les APIs de YouTube
     
-    static func getURLRequest(urlStr: String, parameters: [String: String]?, method: HttpMethod) -> URLRequest? {
+    static func getURLRequest(urlStr: String, parameters: [String: String]?, method: HttpMethod, body: [String: Any]?) -> URLRequest? {
         guard var urlComponents = URLComponents(string: urlStr) else {
             return nil
         }
@@ -31,6 +31,12 @@ public class Service {
         }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
+        if let jsonBody = body {
+            let jsonData = try? JSONSerialization.data(withJSONObject: jsonBody)
+            urlRequest.httpBody = jsonData
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        }
         guard let session = Session.getSession() else {
             return nil
         }

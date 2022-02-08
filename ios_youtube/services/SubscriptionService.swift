@@ -12,7 +12,7 @@ public class SubscriptionService {
     static func getSubscription(completion: @escaping (Error?, [Snippet]?) -> Void) -> Void {
         let parameters = [ "mine": "true", "maxResults": "5"]
         let urlStr = Service.API_URL + "subscriptions"
-        guard let url = Service.getURLRequest(urlStr: urlStr, parameters: parameters, method: HttpMethod.GET) else {
+        guard let url = Service.getURLRequest(urlStr: urlStr, parameters: parameters, method: HttpMethod.GET, body: nil) else {
             completion(NSError(domain: "com.esgi.youtube", code: 1, userInfo: [
                 NSLocalizedFailureReasonErrorKey: "Invalid URL"
             ]), nil)
@@ -31,7 +31,6 @@ public class SubscriptionService {
             }
             do {
                 let json = try JSONSerialization.jsonObject(with: d, options: .allowFragments)
-                print(json)
                 guard let dictSnippets = SnippetFactory.snippetsDictionnary(from: json) else {
                     completion(NSError(domain: "com.esgi.album", code: 3, userInfo: [
                         NSLocalizedFailureReasonErrorKey: "Invalid snippet format"

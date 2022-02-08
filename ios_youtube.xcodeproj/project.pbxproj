@@ -34,6 +34,7 @@
 		A5C31DB527A57EB900499099 /* ConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C31DB327A57EB900499099 /* ConnectionViewController.xib */; };
 		A5C7247A27B1ABA700F50B91 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C7247827B1ABA700F50B91 /* VideoViewController.swift */; };
 		A5C7247B27B1ABA700F50B91 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C7247927B1ABA700F50B91 /* VideoViewController.xib */; };
+		A5C7247D27B311BB00F50B91 /* VideoRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C7247C27B311BB00F50B91 /* VideoRate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		A5C31DB327A57EB900499099 /* ConnectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectionViewController.xib; sourceTree = "<group>"; };
 		A5C7247827B1ABA700F50B91 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A5C7247927B1ABA700F50B91 /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
+		A5C7247C27B311BB00F50B91 /* VideoRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				A57EDA1A27AC6BB5002216AD /* Service.swift */,
 				A57EDA1C27AC73AD002216AD /* HttpMethod.swift */,
 				A57EDA2B27AD2609002216AD /* VideoService.swift */,
+				A5C7247C27B311BB00F50B91 /* VideoRate.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				A57EDA1627AC658F002216AD /* Snippet.swift in Sources */,
 				A57EDA1027AC4D87002216AD /* Session.swift in Sources */,
 				A57EDA1327AC62CC002216AD /* HomeViewController.swift in Sources */,
+				A5C7247D27B311BB00F50B91 /* VideoRate.swift in Sources */,
 				A57EDA1F27AC7675002216AD /* SnippetFactory.swift in Sources */,
 				A57EDA2527AC8756002216AD /* ChannelTableViewCell.swift in Sources */,
 			);
