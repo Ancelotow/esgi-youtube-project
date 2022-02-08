@@ -28,6 +28,11 @@ class VideoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let isLive = video.isLive {
+            if isLive {
+                readVideoButton.setTitle("Rejoindre le DIRECT", for: .normal)
+            }
+        }
         self.titleLabel.text = self.video.title
         self.descriptionLabel.text = self.video.description
         self.imageView.image = nil
@@ -43,8 +48,7 @@ class VideoViewController: UIViewController {
             guard err == nil else {
                 return;
             }
-            let refreshAlert = UIAlertController(title: "Like", message: "Vous avez aimé la vidéo", preferredStyle: UIAlertController.Style.alert)
-            refreshAlert.show(self, sender: nil)
+            // TODO: Ajouter l'appel d'un Toast
         }
     }
     
@@ -53,8 +57,13 @@ class VideoViewController: UIViewController {
             guard err == nil else {
                 return;
             }
-            let refreshAlert = UIAlertController(title: "Dislike", message: "Vous n'avez pas aimé la vidéo", preferredStyle: UIAlertController.Style.alert)
-            refreshAlert.show(self, sender: nil)
+            // TODO: Ajouter l'appel d'un Toast
+        }
+    }
+    
+    @IBAction func readVideo(_ sender: Any) {
+        if let url = URL(string: "https://www.youtube.com/watch?v=\(video.id)") {
+            UIApplication.shared.open(url)
         }
     }
     

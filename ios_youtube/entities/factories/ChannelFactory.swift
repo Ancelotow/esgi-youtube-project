@@ -34,7 +34,7 @@ public class ChannelFactory {
         guard let channelId = ressource["channelId"] as? String else {
             return nil
         }
-        return Snippet(id: id, title: title, desc: desc, URLImage: imgURL, channelId: channelId, publishedAt: nil)
+        return Snippet(id: id, title: title, desc: desc, URLImage: imgURL, channelId: channelId, publishedAt: nil, isLive: nil)
     }
     
     static func channels(from array: [[String: Any]]) -> [Snippet] {
