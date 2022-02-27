@@ -22,7 +22,6 @@ public class VideoFactory {
         guard let title = dictSnippet["title"] as? String,
               let desc = dictSnippet["description"] as? String,
               let channelId = dictSnippet["channelId"] as? String,
-              let isLive = dictSnippet["liveBroadcastContent"] as? Bool,
               let thumbs = dictSnippet["thumbnails"] as? [String: Any] else {
             return nil
         }
@@ -35,7 +34,7 @@ public class VideoFactory {
         guard let imgURL = URL(string: imgURLStr) else {
             return nil
         }
-        return Snippet(id: id, title: title, desc: desc, URLImage: imgURL, channelId: channelId, publishedAt: nil, isLive: isLive)
+        return Snippet(id: id, title: title, desc: desc, URLImage: imgURL, channelId: channelId, publishedAt: nil, isLive: false)
     }
     
     static func videos(from array: [[String: Any]]) -> [Snippet] {

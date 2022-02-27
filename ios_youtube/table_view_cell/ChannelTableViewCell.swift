@@ -37,6 +37,7 @@ class ChannelTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
                 return
             }
             DispatchQueue.main.async {
+                print(allVideo.count)
                 self.videos = allVideo
             }
         }
@@ -57,9 +58,6 @@ class ChannelTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 400.0, height: 150.0 )
-    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let video = self.videos[indexPath.row]

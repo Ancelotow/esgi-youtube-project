@@ -63,6 +63,9 @@
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="unsubscribe:" destination="-1" eventType="touchUpInside" id="Kvf-xs-h0n"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3Q-i3-Z1z">
                     <rect key="frame" x="20" y="584" width="40" height="40"/>

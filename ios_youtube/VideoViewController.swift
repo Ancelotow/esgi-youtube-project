@@ -67,4 +67,14 @@ class VideoViewController: UIViewController {
         }
     }
     
+    @IBAction func unsubscribe(_ sender: Any) {
+        SubscriptionService.unsubscribeChannel(id: self.video.channelId) { err in
+            guard err == nil else {
+                print(err)
+                return;
+            }
+            // TODO: Ajouter l'appel d'un Toast
+        }
+    }
+    
 }

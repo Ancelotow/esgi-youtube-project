@@ -47,4 +47,22 @@ public class SubscriptionService {
         task.resume()
     }
     
+    static func unsubscribeChannel(id: String, completion: @escaping (Error?) -> Void ) -> Void {
+        let urlStr = Service.API_URL + "subscriptions"
+        let parameters = [ "id": id]
+        guard let url = Service.getURLRequest(urlStr: urlStr, parameters: parameters, method: HttpMethod.DELETE, body: nil) else {
+            completion(NSError(domain: "com.esgi.youtube", code: 1, userInfo: [
+                NSLocalizedFailureReasonErrorKey: "Invalid URL"
+            ]))
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { data, res, err in
+            guard err == nil else {
+                completion(err)
+                return
+            }
+        }
+        task.resume()
+    }
+    
 }
