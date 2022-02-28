@@ -35,6 +35,10 @@
 		A5C7247A27B1ABA700F50B91 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C7247827B1ABA700F50B91 /* VideoViewController.swift */; };
 		A5C7247B27B1ABA700F50B91 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C7247927B1ABA700F50B91 /* VideoViewController.xib */; };
 		A5C7247D27B311BB00F50B91 /* VideoRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C7247C27B311BB00F50B91 /* VideoRate.swift */; };
+		A5D07D6D27CD182D00B85047 /* CommentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D07D6C27CD182D00B85047 /* CommentFactory.swift */; };
+		A5D07D6F27CD18F100B85047 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D07D6E27CD18F100B85047 /* Comment.swift */; };
+		A5D07D7627CD1D2400B85047 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D07D7427CD1D2400B85047 /* CommentTableViewCell.swift */; };
+		A5D07D7727CD1D2400B85047 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D07D7527CD1D2400B85047 /* CommentTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		A5C7247827B1ABA700F50B91 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A5C7247927B1ABA700F50B91 /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		A5C7247C27B311BB00F50B91 /* VideoRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRate.swift; sourceTree = "<group>"; };
+		A5D07D6C27CD182D00B85047 /* CommentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFactory.swift; sourceTree = "<group>"; };
+		A5D07D6E27CD18F100B85047 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A5D07D7427CD1D2400B85047 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		A5D07D7527CD1D2400B85047 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +188,7 @@
 				A57EDA0F27AC4D87002216AD /* Session.swift */,
 				A57EDA1527AC658F002216AD /* Snippet.swift */,
 				A5099A3927B0128B007E07B0 /* ImageDownloader.swift */,
+				A5D07D6E27CD18F100B85047 /* Comment.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -203,6 +212,8 @@
 				A57EDA2427AC8756002216AD /* ChannelTableViewCell.xib */,
 				A5099A3527B00944007E07B0 /* VideoCollectionViewCell.swift */,
 				A5099A3627B00944007E07B0 /* VideoCollectionViewCell.xib */,
+				A5D07D7427CD1D2400B85047 /* CommentTableViewCell.swift */,
+				A5D07D7527CD1D2400B85047 /* CommentTableViewCell.xib */,
 			);
 			path = table_view_cell;
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 				A57EDA1E27AC7675002216AD /* SnippetFactory.swift */,
 				A57EDA3427AE90D4002216AD /* ChannelFactory.swift */,
 				A57EDA3627AE91DF002216AD /* VideoFactory.swift */,
+				A5D07D6C27CD182D00B85047 /* CommentFactory.swift */,
 			);
 			path = factories;
 			sourceTree = "<group>";
@@ -331,6 +343,7 @@
 				A5099A3827B00944007E07B0 /* VideoCollectionViewCell.xib in Resources */,
 				A5C31DB527A57EB900499099 /* ConnectionViewController.xib in Resources */,
 				A5C7247B27B1ABA700F50B91 /* VideoViewController.xib in Resources */,
+				A5D07D7727CD1D2400B85047 /* CommentTableViewCell.xib in Resources */,
 				A522207527A2D8A20040C94A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,14 +437,17 @@
 				A57EDA3727AE91DF002216AD /* VideoFactory.swift in Sources */,
 				A57EDA1B27AC6BB5002216AD /* Service.swift in Sources */,
 				A57EDA3527AE90D4002216AD /* ChannelFactory.swift in Sources */,
+				A5D07D7627CD1D2400B85047 /* CommentTableViewCell.swift in Sources */,
 				A522206C27A2D8A20040C94A /* AppDelegate.swift in Sources */,
 				A57EDA1927AC699A002216AD /* SubscriptionService.swift in Sources */,
 				A57EDA1D27AC73AD002216AD /* HttpMethod.swift in Sources */,
 				A5C7247A27B1ABA700F50B91 /* VideoViewController.swift in Sources */,
 				A57EDA1627AC658F002216AD /* Snippet.swift in Sources */,
+				A5D07D6D27CD182D00B85047 /* CommentFactory.swift in Sources */,
 				A57EDA1027AC4D87002216AD /* Session.swift in Sources */,
 				A57EDA1327AC62CC002216AD /* HomeViewController.swift in Sources */,
 				A5C7247D27B311BB00F50B91 /* VideoRate.swift in Sources */,
+				A5D07D6F27CD18F100B85047 /* Comment.swift in Sources */,
 				A57EDA1F27AC7675002216AD /* SnippetFactory.swift in Sources */,
 				A57EDA2527AC8756002216AD /* ChannelTableViewCell.swift in Sources */,
 			);

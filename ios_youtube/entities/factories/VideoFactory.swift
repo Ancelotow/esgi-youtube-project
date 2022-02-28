@@ -34,7 +34,7 @@ public class VideoFactory {
         guard let imgURL = URL(string: imgURLStr) else {
             return nil
         }
-        return Snippet(id: id, title: title, desc: desc, URLImage: imgURL, channelId: channelId, publishedAt: nil, isLive: false)
+        return Snippet(id: id, title: title, desc: desc, URLImage: imgURL, channelId: channelId, publishedAt: nil, isLive: false, textDisplay: nil)
     }
     
     static func videos(from array: [[String: Any]]) -> [Snippet] {

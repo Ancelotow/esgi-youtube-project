@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +15,7 @@
                 <outlet property="descriptionLabel" destination="hJP-U2-mC2" id="HGI-Ux-4Qw"/>
                 <outlet property="imageView" destination="KIT-VS-b9c" id="0dc-j9-FQp"/>
                 <outlet property="readVideoButton" destination="kHh-EP-IyY" id="Nag-4i-qb0"/>
+                <outlet property="tableViewComments" destination="DP7-Qe-d4R" id="hUG-FP-TAM"/>
                 <outlet property="titleLabel" destination="NKm-AS-bdp" id="eFT-Nh-huB"/>
                 <outlet property="unsubscribeButton" destination="jdS-8i-DwG" id="Q4s-r5-AEA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -100,17 +102,31 @@
                         <action selector="dislikeVideo:" destination="-1" eventType="touchUpInside" id="GDK-P9-oZx"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commentaires" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93H-wd-h49">
+                    <rect key="frame" x="5" y="644" width="164" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DP7-Qe-d4R">
+                    <rect key="frame" x="5" y="696" width="404" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kHh-EP-IyY" secondAttribute="trailing" constant="5" id="2dz-OR-EnQ"/>
                 <constraint firstItem="kHh-EP-IyY" firstAttribute="top" secondItem="NKm-AS-bdp" secondAttribute="bottom" constant="20" id="Dnh-73-xTd"/>
+                <constraint firstItem="DP7-Qe-d4R" firstAttribute="top" secondItem="93H-wd-h49" secondAttribute="bottom" constant="20" id="FzO-fg-wvs"/>
                 <constraint firstItem="KIT-VS-b9c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GVd-iG-p0s"/>
                 <constraint firstItem="hJP-U2-mC2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="5" id="GeT-05-pgv"/>
                 <constraint firstItem="g3Q-i3-Z1z" firstAttribute="top" secondItem="hJP-U2-mC2" secondAttribute="bottom" constant="20" id="HY8-zm-V0P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DP7-Qe-d4R" secondAttribute="trailing" constant="5" id="Hn5-NW-naD"/>
+                <constraint firstItem="DP7-Qe-d4R" firstAttribute="leading" secondItem="93H-wd-h49" secondAttribute="leading" id="JON-sY-Rb9"/>
                 <constraint firstItem="jdS-8i-DwG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="Nen-a2-WlL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jdS-8i-DwG" secondAttribute="trailing" constant="5" id="P1K-lF-KKv"/>
+                <constraint firstAttribute="bottom" secondItem="DP7-Qe-d4R" secondAttribute="bottom" id="Puo-DS-meO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NKm-AS-bdp" secondAttribute="trailing" constant="5" id="YhI-JE-5Jt"/>
                 <constraint firstItem="KIT-VS-b9c" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZWG-Hw-hfc"/>
                 <constraint firstItem="NKm-AS-bdp" firstAttribute="top" secondItem="KIT-VS-b9c" secondAttribute="bottom" id="bkd-9L-eTZ"/>
@@ -121,8 +137,10 @@
                 <constraint firstItem="g3Q-i3-Z1z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mkg-2G-MHO"/>
                 <constraint firstItem="Yh3-Ic-U1R" firstAttribute="leading" secondItem="g3Q-i3-Z1z" secondAttribute="trailing" constant="50" id="qwf-Gr-ibc"/>
                 <constraint firstItem="hJP-U2-mC2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="sPh-KK-UQW"/>
+                <constraint firstItem="93H-wd-h49" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="sbN-a0-kd9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KIT-VS-b9c" secondAttribute="trailing" id="tJX-uo-UK2"/>
                 <constraint firstItem="jdS-8i-DwG" firstAttribute="top" secondItem="kHh-EP-IyY" secondAttribute="bottom" constant="10" id="tty-pk-0ei"/>
+                <constraint firstItem="93H-wd-h49" firstAttribute="top" secondItem="g3Q-i3-Z1z" secondAttribute="bottom" constant="20" id="vHr-az-faV"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>
@@ -130,5 +148,8 @@
     <resources>
         <image name="dislike" width="455" height="468"/>
         <image name="like" width="455" height="468"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
