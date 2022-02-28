@@ -10,7 +10,7 @@ import Foundation
 public class SubscriptionService {
     
     static func getSubscription(completion: @escaping (Error?, [Snippet]?) -> Void) -> Void {
-        let parameters = [ "mine": "true", "maxResults": "5"]
+        let parameters = [ "mine": "true", "maxResults": "7"]
         let urlStr = Service.API_URL + "subscriptions"
         guard let url = Service.getURLRequest(urlStr: urlStr, parameters: parameters, method: HttpMethod.GET, body: nil) else {
             completion(NSError(domain: "com.esgi.youtube", code: 1, userInfo: [

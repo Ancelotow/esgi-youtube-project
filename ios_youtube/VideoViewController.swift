@@ -72,7 +72,11 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             guard err == nil else {
                 return;
             }
-            // TODO: Ajouter l'appel d'un Toast
+            let alert = UIAlertController(title: "LIKE", message: "Vous avez aimé la vidéo.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Fermer", style: UIAlertAction.Style.default, handler: nil))
+            DispatchQueue.main.async {
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -81,7 +85,11 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             guard err == nil else {
                 return;
             }
-            // TODO: Ajouter l'appel d'un Toast
+            let alert = UIAlertController(title: "DISLIKE", message: "Vous n'avez pas aimé la vidéo.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Fermer", style: UIAlertAction.Style.default, handler: nil))
+            DispatchQueue.main.async {
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     

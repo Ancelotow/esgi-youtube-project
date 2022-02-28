@@ -14,6 +14,8 @@ class CommentTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.labelComment.layer.masksToBounds = true
+        self.labelComment.layer.cornerRadius = 5
     }
 
     func redraw(comment: Comment) {
