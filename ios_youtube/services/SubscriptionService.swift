@@ -49,7 +49,7 @@ public class SubscriptionService {
     
     static func unsubscribeChannel(id: String, completion: @escaping (Error?) -> Void ) -> Void {
         let urlStr = Service.API_URL + "subscriptions"
-        let parameters = [ "id": id]
+        let parameters = [ "id": id ]
         guard let url = Service.getURLRequest(urlStr: urlStr, parameters: parameters, method: HttpMethod.DELETE, body: nil) else {
             completion(NSError(domain: "com.esgi.youtube", code: 1, userInfo: [
                 NSLocalizedFailureReasonErrorKey: "Invalid URL"
@@ -61,6 +61,7 @@ public class SubscriptionService {
                 completion(err)
                 return
             }
+            completion(nil)
         }
         task.resume()
     }

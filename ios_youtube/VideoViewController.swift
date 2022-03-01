@@ -52,7 +52,7 @@ class VideoViewController: UIViewController {
             guard err == nil else {
                 return;
             }
-            let alert = UIAlertController(title: "LIKE", message: "Vous avez aimé la vidéo.", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "J'aime", message: "Vous avez aimé la vidéo.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Fermer", style: UIAlertAction.Style.default, handler: nil))
             DispatchQueue.main.async {
                 self.present(alert, animated: true, completion: nil)
@@ -65,7 +65,7 @@ class VideoViewController: UIViewController {
             guard err == nil else {
                 return;
             }
-            let alert = UIAlertController(title: "DISLIKE", message: "Vous n'avez pas aimé la vidéo.", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "J'aime pas", message: "Vous n'avez pas aimé la vidéo.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Fermer", style: UIAlertAction.Style.default, handler: nil))
             DispatchQueue.main.async {
                 self.present(alert, animated: true, completion: nil)
@@ -85,7 +85,11 @@ class VideoViewController: UIViewController {
                 print(err)
                 return;
             }
-            // TODO: Ajouter l'appel d'un Toast
+            let alert = UIAlertController(title: "Désabonné", message: "Vous vous êtes désabonné de cette chaîne.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Fermer", style: UIAlertAction.Style.default, handler: nil))
+            DispatchQueue.main.async {
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     

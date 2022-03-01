@@ -61,6 +61,7 @@ public class VideoService {
                 completion(err)
                 return
             }
+            completion(nil)
         }
         task.resume()
     }

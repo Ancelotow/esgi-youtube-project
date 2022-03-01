@@ -25,6 +25,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableChannel.delegate = self
         self.tableChannel.rowHeight = 155.0
         self.navigationItem.hidesBackButton = true
+        self.tableChannel.tableHeaderView = nil;
+        self.tableChannel.tableFooterView = nil;
         SubscriptionService.getSubscription() { err, result in
             guard err == nil else {
                 return
