@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,10 +11,10 @@
             <connections>
                 <outlet property="buttonDislike" destination="Yh3-Ic-U1R" id="Ahg-Vy-Yjo"/>
                 <outlet property="buttonLike" destination="g3Q-i3-Z1z" id="p9h-xF-tmz"/>
+                <outlet property="commentButton" destination="hzI-XH-Ct6" id="SSA-j6-HAJ"/>
                 <outlet property="descriptionLabel" destination="hJP-U2-mC2" id="HGI-Ux-4Qw"/>
                 <outlet property="imageView" destination="KIT-VS-b9c" id="0dc-j9-FQp"/>
                 <outlet property="readVideoButton" destination="kHh-EP-IyY" id="Nag-4i-qb0"/>
-                <outlet property="tableViewComments" destination="DP7-Qe-d4R" id="hUG-FP-TAM"/>
                 <outlet property="titleLabel" destination="NKm-AS-bdp" id="eFT-Nh-huB"/>
                 <outlet property="unsubscribeButton" destination="jdS-8i-DwG" id="Q4s-r5-AEA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -70,10 +69,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3Q-i3-Z1z">
-                    <rect key="frame" x="20" y="584" width="40" height="40"/>
+                    <rect key="frame" x="20" y="574" width="25" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="A5w-3J-7mg"/>
-                        <constraint firstAttribute="width" constant="40" id="O3k-fD-uzk"/>
+                        <constraint firstAttribute="height" constant="25" id="A5w-3J-7mg"/>
+                        <constraint firstAttribute="width" constant="25" id="O3k-fD-uzk"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button" image="like"/>
@@ -91,10 +90,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh3-Ic-U1R">
-                    <rect key="frame" x="110" y="584" width="40" height="40"/>
+                    <rect key="frame" x="65" y="574" width="25" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="pth-mq-lDa"/>
-                        <constraint firstAttribute="width" constant="40" id="xvf-0x-vEp"/>
+                        <constraint firstAttribute="height" constant="25" id="pth-mq-lDa"/>
+                        <constraint firstAttribute="width" constant="25" id="xvf-0x-vEp"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button" image="dislike"/>
@@ -102,34 +101,42 @@
                         <action selector="dislikeVideo:" destination="-1" eventType="touchUpInside" id="GDK-P9-oZx"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DP7-Qe-d4R">
-                    <rect key="frame" x="5" y="632" width="404" height="264"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzI-XH-Ct6">
+                    <rect key="frame" x="110" y="567" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="nV5-da-Jvc"/>
+                        <constraint firstAttribute="width" constant="35" id="ogY-Gj-jlj"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="message.fill" catalog="system" title="">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="gotToComment:" destination="-1" eventType="touchUpInside" id="RZi-Lw-w9j"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="hzI-XH-Ct6" firstAttribute="top" secondItem="hJP-U2-mC2" secondAttribute="bottom" constant="3" id="1rg-Gl-5Lu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kHh-EP-IyY" secondAttribute="trailing" constant="5" id="2dz-OR-EnQ"/>
                 <constraint firstItem="kHh-EP-IyY" firstAttribute="top" secondItem="NKm-AS-bdp" secondAttribute="bottom" constant="20" id="Dnh-73-xTd"/>
                 <constraint firstItem="KIT-VS-b9c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GVd-iG-p0s"/>
                 <constraint firstItem="hJP-U2-mC2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="5" id="GeT-05-pgv"/>
-                <constraint firstItem="g3Q-i3-Z1z" firstAttribute="top" secondItem="hJP-U2-mC2" secondAttribute="bottom" constant="20" id="HY8-zm-V0P"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DP7-Qe-d4R" secondAttribute="trailing" constant="5" id="Hn5-NW-naD"/>
+                <constraint firstItem="g3Q-i3-Z1z" firstAttribute="top" secondItem="hJP-U2-mC2" secondAttribute="bottom" constant="10" id="HY8-zm-V0P"/>
                 <constraint firstItem="jdS-8i-DwG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="Nen-a2-WlL"/>
-                <constraint firstItem="DP7-Qe-d4R" firstAttribute="top" secondItem="g3Q-i3-Z1z" secondAttribute="bottom" constant="8" id="Oih-jm-Pje"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jdS-8i-DwG" secondAttribute="trailing" constant="5" id="P1K-lF-KKv"/>
-                <constraint firstAttribute="bottom" secondItem="DP7-Qe-d4R" secondAttribute="bottom" id="Puo-DS-meO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NKm-AS-bdp" secondAttribute="trailing" constant="5" id="YhI-JE-5Jt"/>
                 <constraint firstItem="KIT-VS-b9c" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZWG-Hw-hfc"/>
                 <constraint firstItem="NKm-AS-bdp" firstAttribute="top" secondItem="KIT-VS-b9c" secondAttribute="bottom" id="bkd-9L-eTZ"/>
                 <constraint firstItem="hJP-U2-mC2" firstAttribute="top" secondItem="jdS-8i-DwG" secondAttribute="bottom" id="eGg-GO-Jgv"/>
+                <constraint firstItem="hzI-XH-Ct6" firstAttribute="leading" secondItem="Yh3-Ic-U1R" secondAttribute="trailing" constant="20" id="hCm-uq-fUy"/>
                 <constraint firstItem="kHh-EP-IyY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="hDg-0R-B8J"/>
-                <constraint firstItem="DP7-Qe-d4R" firstAttribute="leading" secondItem="hJP-U2-mC2" secondAttribute="leading" id="inZ-B8-wrg"/>
-                <constraint firstItem="Yh3-Ic-U1R" firstAttribute="top" secondItem="hJP-U2-mC2" secondAttribute="bottom" constant="20" id="k7T-he-Ri8"/>
+                <constraint firstItem="Yh3-Ic-U1R" firstAttribute="top" secondItem="hJP-U2-mC2" secondAttribute="bottom" constant="10" id="k7T-he-Ri8"/>
                 <constraint firstItem="NKm-AS-bdp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="mcr-tK-btH"/>
                 <constraint firstItem="g3Q-i3-Z1z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mkg-2G-MHO"/>
-                <constraint firstItem="Yh3-Ic-U1R" firstAttribute="leading" secondItem="g3Q-i3-Z1z" secondAttribute="trailing" constant="50" id="qwf-Gr-ibc"/>
+                <constraint firstItem="Yh3-Ic-U1R" firstAttribute="leading" secondItem="g3Q-i3-Z1z" secondAttribute="trailing" constant="20" id="qwf-Gr-ibc"/>
                 <constraint firstItem="hJP-U2-mC2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="sPh-KK-UQW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KIT-VS-b9c" secondAttribute="trailing" id="tJX-uo-UK2"/>
                 <constraint firstItem="jdS-8i-DwG" firstAttribute="top" secondItem="kHh-EP-IyY" secondAttribute="bottom" constant="10" id="tty-pk-0ei"/>
@@ -140,8 +147,6 @@
     <resources>
         <image name="dislike" width="455" height="468"/>
         <image name="like" width="455" height="468"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
     </resources>
 </document>
